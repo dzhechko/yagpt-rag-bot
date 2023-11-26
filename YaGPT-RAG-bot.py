@@ -126,9 +126,9 @@ def main():
     yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID")
     yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
     mdb_os_ca = MDB_OS_CA
-    mdb_os_pwd = st.sidebar.text_input("MDB_OS_PWD", type='password')
-    mdb_os_hosts = st.sidebar.text_input("MDB_OS_HOSTS").split(",")
-    mdb_os_index_name = st.sidebar.text_input("MDB_OS_INDEX_NAME")
+    mdb_os_pwd = st.sidebar.text_input("MDB_OpenSearch_PWD", type='password')
+    mdb_os_hosts = st.sidebar.text_input("MDB_OpenSearch_HOSTS").split(",")
+    mdb_os_index_name = st.sidebar.text_input("MDB_OpenSearch_INDEX_NAME")
 
     # Параметры chunk_size и chunk_overlap
     global chunk_size, chunk_overlap
