@@ -11,21 +11,18 @@
 
 ### Структура репозитория и порядок работы с ботом
 - в файле ``.env`` находятся "чувствительные" к утечкам данные, надо указать значения всех параметров
-``````
+```
 YAGPT_FOLDER_ID = 
 YAGPT_API_ID = 
 YAGPT_API_KEY = 
 MDB_OS_PWD = 
 MDB_OS_HOSTS = fqdn-host1,fqdn-host2,fqdn-host3
-``````
+```
 - файл `requirements.txt` традиционно содержит в себе список необходимых для работы программы модулей, которые устанавливаются командой 
 ```pip install -r requirements.txt ```
-
 - в папке `images` хранится логотип компании, который можно использовать в графическом интерфейсе streamlit
-
 - `YaGPT-RAG-bot.py` запускаемый файл
 
 ## Запуск в Streamlit Community Cloud
-
 Вы можете развернуть это приложение через Streamlit Community Cloud, следуя [следующим инструкциям](https://docs.streamlit.io/streamlit-community-cloud/get-started)
 
