@@ -17,7 +17,7 @@ YAGPT_API_ID =
 YAGPT_API_KEY = 
 MDB_OS_PWD = 
 MDB_OS_HOSTS = fqdn-host1,fqdn-host2,fqdn-host3
-
+``````
 - файл `requirements.txt` традиционно содержит в себе список необходимых для работы программы модулей, которые устанавливаются командой 
 ```pip install -r requirements.txt ```
 
