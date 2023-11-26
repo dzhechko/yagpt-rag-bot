@@ -19,8 +19,8 @@ from streamlit_chat import message
 
 # from dotenv import load_dotenv
 
-# ROOT_DIRECTORY = "."
-# MDB_OS_CA = f"{ROOT_DIRECTORY}/.opensearch/root.crt"
+ROOT_DIRECTORY = "."
+MDB_OS_CA = f"{ROOT_DIRECTORY}/.opensearch/root.crt"
 
 # использовать системные переменные из облака streamlit (secrets)
 # yagpt_api_key = st.secrets["yagpt_api_key"]
