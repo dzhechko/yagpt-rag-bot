@@ -58,7 +58,7 @@ def ingest_docs(temp_dir: str = tempfile.gettempdir()):
             mdb_os_hosts,
             http_auth=('admin', mdb_os_pwd),
             use_ssl=True,
-            verify_certs=True,
+            verify_certs=False,
             ca_certs=MDB_OS_CA)
 
         # инициируем процедуру превращения блоков текста в Embeddings через YaGPT Embeddings API, используя API ключ доступа
@@ -71,7 +71,7 @@ def ingest_docs(temp_dir: str = tempfile.gettempdir()):
             opensearch_url=mdb_os_hosts,
             http_auth=("admin", mdb_os_pwd),
             use_ssl = True,
-            verify_certs = True,
+            verify_certs = False,
             ca_certs = MDB_OS_CA,
             engine = 'lucene',
             index_name = mdb_os_index_name,
@@ -173,7 +173,7 @@ def main():
             mdb_os_hosts,
             http_auth=('admin', mdb_os_pwd),
             use_ssl=True,
-            verify_certs=True,
+            verify_certs=False,
             ca_certs=MDB_OS_CA
             )
 
@@ -190,7 +190,7 @@ def main():
             opensearch_url=mdb_os_hosts,
             http_auth=("admin", mdb_os_pwd),
             use_ssl = True,
-            verify_certs = True,
+            verify_certs = False,
             ca_certs = MDB_OS_CA,
             engine = 'lucene'
         )  
