@@ -26,12 +26,11 @@ MDB_OS_CA = f"{ROOT_DIRECTORY}/.opensearch/root.crt"
 # yagpt_api_key = st.secrets["yagpt_api_key"]
 # yagpt_folder_id = st.secrets["yagpt_folder_id"]
 # yagpt_api_id = st.secrets["yagpt_api_id"]
-# MDB_OS_CA = st.secrets["mdb_os_ca"]
 # mdb_os_pwd = st.secrets["mdb_os_pwd"]
 # mdb_os_hosts = st.secrets["mdb_os_hosts"].split(",")
 # mdb_os_index_name = st.secrets["mdb_os_index_name"]
 
-
+# MDB_OS_CA = st.secrets["mdb_os_ca"] # 
 
 def ingest_docs(temp_dir: str = tempfile.gettempdir()):
     """
