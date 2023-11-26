@@ -1,0 +1,6 @@
+yandex-chain
+streamlit
+streamlit-chat
+langchain
+opensearch-py
+pypdf
