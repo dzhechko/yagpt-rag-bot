@@ -18,16 +18,17 @@ YAGPT_API_KEY =
 MDB_OS_PWD = 
 MDB_OS_HOSTS = fqdn-host1,fqdn-host2,fqdn-host3
 
-- файл ``requirements.txt`` традиционно содержит в себе список необходимых для работы программы модулей, которые устанавливаются командой ``pip install -r requirements.txt``
+- файл `requirements.txt` традиционно содержит в себе список необходимых для работы программы модулей, которые устанавливаются командой 
+```pip install -r requirements.txt ```
 
-- в папке ``images`` хранится логотип компании, который можно использовать в графическом интерфейсе streamlit
+- в папке `images` хранится логотип компании, который можно использовать в графическом интерфейсе streamlit
 
-- YaGPT-RAG-bot.py запускаемый файл
+- `YaGPT-RAG-bot.py` запускаемый файл
 
 ### Особенности
 - интеграция с yc object storage через s3fs
 
 ## Запуск в Streamlit Community Cloud
 
-Вы можете развернуть это приложение через Streamlit Community Cloud, следуя следующим инструкциям [docs](https://docs.streamlit.io/streamlit-community-cloud/get-started)
+Вы можете развернуть это приложение через Streamlit Community Cloud, следуя [следующим инструкциям](https://docs.streamlit.io/streamlit-community-cloud/get-started)
 
