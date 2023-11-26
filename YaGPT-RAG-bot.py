@@ -21,13 +21,13 @@ from streamlit_chat import message
 
 
 # использовать системные переменные из облака streamlit (secrets)
-# yagpt_api_key = st.secrets["YAGPT_API_KEY"]
-# yagpt_folder_id = st.secrets["YAGPT_FOLDER_ID"]
-# yagpt_api_id = st.secrets["YAGPT_API_ID"]
-MDB_OS_CA = st.secrets["MDB_OS_CA"]
-# mdb_os_pwd = st.secrets["MDB_OS_PWD"]
-# mdb_os_hosts = st.secrets["MDB_OS_HOSTS"].split(",")
-# mdb_os_index_name = st.secrets["MDB_INDEX_NAME"]
+# yagpt_api_key = st.secrets["yagpt_api_key"]
+# yagpt_folder_id = st.secrets["yagpt_folder_id"]
+# yagpt_api_id = st.secrets["yagpt_api_id"]
+MDB_OS_CA = st.secrets["mdb_os_ca"]
+# mdb_os_pwd = st.secrets["mdb_os_pwd"]
+# mdb_os_hosts = st.secrets["mdb_os_hosts"].split(",")
+# mdb_os_index_name = st.secrets["mdb_os_index_name"]
 
 
 
