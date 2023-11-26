@@ -19,12 +19,14 @@ from streamlit_chat import message
 
 # from dotenv import load_dotenv
 
+# ROOT_DIRECTORY = "."
+# MDB_OS_CA = f"{ROOT_DIRECTORY}/.opensearch/root.crt"
 
 # использовать системные переменные из облака streamlit (secrets)
 # yagpt_api_key = st.secrets["yagpt_api_key"]
 # yagpt_folder_id = st.secrets["yagpt_folder_id"]
 # yagpt_api_id = st.secrets["yagpt_api_id"]
-MDB_OS_CA = st.secrets["mdb_os_ca"]
+# MDB_OS_CA = st.secrets["mdb_os_ca"]
 # mdb_os_pwd = st.secrets["mdb_os_pwd"]
 # mdb_os_hosts = st.secrets["mdb_os_hosts"].split(",")
 # mdb_os_index_name = st.secrets["mdb_os_index_name"]
@@ -60,7 +62,11 @@ def ingest_docs(temp_dir: str = tempfile.gettempdir()):
             use_ssl=True,
             verify_certs=False,
             ca_certs=MDB_OS_CA)
-
+        # для включения проверки MDB сертификата используйте verify_certs=True, также надо будет загрузить сертификат используя инструкцию по ссылке 
+        # https://cloud.yandex.ru/docs/managed-opensearch/operations/connect 
+        # и положить его в папку .opensearch/root.crt
+        # надо будет в самом начале кода вверху раскомментировать строчку MDB_OS_CA = f"{ROOT_DIRECTORY}/.opensearch/root.crt"
+        
         # инициируем процедуру превращения блоков текста в Embeddings через YaGPT Embeddings API, используя API ключ доступа
         embeddings = YandexEmbeddings(folder_id=yagpt_folder_id, api_key=yagpt_api_key)
 
