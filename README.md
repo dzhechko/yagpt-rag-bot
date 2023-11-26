@@ -25,9 +25,6 @@ MDB_OS_HOSTS = fqdn-host1,fqdn-host2,fqdn-host3
 
 - `YaGPT-RAG-bot.py` запускаемый файл
 
-### Особенности
-- интеграция с yc object storage через s3fs
-
 ## Запуск в Streamlit Community Cloud
 
 Вы можете развернуть это приложение через Streamlit Community Cloud, следуя [следующим инструкциям](https://docs.streamlit.io/streamlit-community-cloud/get-started)
