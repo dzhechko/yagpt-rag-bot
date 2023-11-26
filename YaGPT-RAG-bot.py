@@ -24,7 +24,7 @@ from streamlit_chat import message
 # yagpt_api_key = st.secrets["YAGPT_API_KEY"]
 # yagpt_folder_id = st.secrets["YAGPT_FOLDER_ID"]
 # yagpt_api_id = st.secrets["YAGPT_API_ID"]
-mdb_os_ca = st.secrets["MDB_OS_CA"]
+MDB_OS_CA = st.secrets["MDB_OS_CA"]
 # mdb_os_pwd = st.secrets["MDB_OS_PWD"]
 # mdb_os_hosts = st.secrets["MDB_OS_HOSTS"].split(",")
 # mdb_os_index_name = st.secrets["MDB_INDEX_NAME"]
