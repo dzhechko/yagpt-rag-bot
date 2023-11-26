@@ -23,6 +23,6 @@ MDB_OS_HOSTS = fqdn-host1,fqdn-host2,fqdn-host3
 - в папке `images` хранится логотип компании, который можно использовать в графическом интерфейсе streamlit
 - `YaGPT-RAG-bot.py` запускаемый файл
 
-## Запуск в Streamlit Community Cloud
+### Запуск в Streamlit Community Cloud
 Вы можете развернуть это приложение через Streamlit Community Cloud, следуя [следующим инструкциям](https://docs.streamlit.io/streamlit-community-cloud/get-started)
 
