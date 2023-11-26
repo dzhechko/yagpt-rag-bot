@@ -1,4 +1,4 @@
-# создаем простое streamlit приложение для общения с вашим pdf при помощи YaGPT
+# создаем простое streamlit приложение для работы с вашими pdf-файлами при помощи YaGPT
 
 import streamlit as st
 import tempfile
