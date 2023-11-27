@@ -136,7 +136,7 @@ def main():
     # Выводим предупреждение, если пользователь не указал свои учетные данные
     if not yagpt_api_key or not yagpt_folder_id or not yagpt_api_id or not mdb_os_pwd or not mdb_os_hosts or not mdb_os_index_name:
         st.warning(
-            "Пожалуйста, задайте свои учетные данные в secrets или .env для запуска этого приложения.")
+            "Пожалуйста, задайте свои учетные данные (в secrets/.env или в раскрывающейся панели слева) для запуска этого приложения.")
 
     # Загрузка pdf файлов
     uploaded_files = st.file_uploader(
