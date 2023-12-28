@@ -249,6 +249,15 @@ def main():
                     # # обновляем историю чата с помощью вопроса пользователя и ответа от бота
                     st.session_state['chat_history'].append(
                         {"вопрос": user_input, "ответ": output['result']})
+                    ## добавляем источники к ответу
+                    input_documents = output['source_documents']
+                    i = 0
+                    for doc in input_documents:
+                        source = doc.metadata['source']
+                        page_content = doc.page_content
+                        i = i + 1
+                        with st.expander(f"**Источник N{i}:** [{source}]"):
+                            st.write(page_content)
 
         if st.session_state['generated']:
             with response_container:
