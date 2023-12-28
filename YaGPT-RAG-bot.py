@@ -130,6 +130,9 @@ def main():
     mdb_os_hosts = st.sidebar.text_input("MDB_OpenSearch_HOSTS через 'запятую' ", type='password').split(",")
     mdb_os_index_name = st.sidebar.text_input("MDB_OpenSearch_INDEX_NAME")
 
+    yagpt_temp = st.sidebar.text_input("Температура", type='password', value=0.01)
+    rag_k = st.sidebar.text_input("Количество поисковых выдач размером с один блок", type='password', value=5)
+
     # Параметры chunk_size и chunk_overlap
     global chunk_size, chunk_overlap
     chunk_size = st.sidebar.slider("Выберите размер текстового 'окна' разметки документов в символах", 0, 2000, 1000)
@@ -187,7 +190,7 @@ def main():
         embeddings = YandexEmbeddings(folder_id=yagpt_folder_id, api_key=yagpt_api_key)
 
         # обращение к модели YaGPT
-        llm = YandexLLM(api_key=yagpt_api_key, folder_id=yagpt_folder_id, temperature = 0.01, max_tokens=7000)
+        llm = YandexLLM(api_key=yagpt_api_key, folder_id=yagpt_folder_id, temperature = yagpt_temp, max_tokens=7000)
 
         # инициализация retrival chain - цепочки поиска
         vectorstore = OpenSearchVectorSearch (
@@ -212,7 +215,7 @@ def main():
         QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
         qa = RetrievalQA.from_chain_type(
             llm,
-            retriever=vectorstore.as_retriever(search_kwargs={'k': 5}),
+            retriever=vectorstore.as_retriever(search_kwargs={'k': rag_k}),
             return_source_documents=True,
             chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
         )
