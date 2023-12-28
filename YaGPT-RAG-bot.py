@@ -53,6 +53,8 @@ def ingest_docs(temp_dir: str = tempfile.gettempdir()):
             chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         documents = text_splitter.split_documents(documents)
         print(len(documents))
+        text_to_print = f"Ориентировочное время = {len(documents)} с."
+        st.text(text_to_print)
 
         # подключаемся к базе данных MDB Opensearch, используя наши ключи (проверка подключения)
         conn = OpenSearch(
