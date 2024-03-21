@@ -38,7 +38,7 @@ def ingest_docs(temp_dir: str = tempfile.gettempdir()):
     """
     try:
         # выдать ошибку, если каких-то переменных не хватает
-        if not yagpt_api_key or not yagpt_folder_id or not yagpt_api_id or not mdb_os_pwd or not mdb_os_hosts or not mdb_os_index_name:
+        if not yagpt_api_key or not yagpt_folder_id or not mdb_os_pwd or not mdb_os_hosts or not mdb_os_index_name:
             raise ValueError(
                 "Пожалуйста укажите необходимый набор переменных окружения")
 
@@ -121,9 +121,9 @@ def main():
         - [LangChain](https://python.langchain.com/)
         ''')
 
-    global  yagpt_folder_id, yagpt_api_id, yagpt_api_key, mdb_os_ca, mdb_os_pwd, mdb_os_hosts, mdb_os_index_name    
+    global  yagpt_folder_id, yagpt_api_key, mdb_os_ca, mdb_os_pwd, mdb_os_hosts, mdb_os_index_name    
     yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password')
-    yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password')
+    # yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password')
     yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
     mdb_os_ca = MDB_OS_CA
     mdb_os_pwd = st.sidebar.text_input("MDB_OpenSearch_PASSWORD", type='password')
@@ -139,7 +139,7 @@ def main():
     chunk_overlap = st.sidebar.slider("Выберите размер блока перекрытия в символах", 0, 400, 100)
 
     # Выводим предупреждение, если пользователь не указал свои учетные данные
-    if not yagpt_api_key or not yagpt_folder_id or not yagpt_api_id or not mdb_os_pwd or not mdb_os_hosts or not mdb_os_index_name:
+    if not yagpt_api_key or not yagpt_folder_id or not mdb_os_pwd or not mdb_os_hosts or not mdb_os_index_name:
         st.warning(
             "Пожалуйста, задайте свои учетные данные (в secrets/.env или в раскрывающейся панели слева) для запуска этого приложения.")
 

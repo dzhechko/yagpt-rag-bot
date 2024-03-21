@@ -13,7 +13,6 @@
 - в файле ``.env`` находятся системные переменные (которые при запуске в облаке можно указать как secrets)
 ```
 YAGPT_FOLDER_ID = 
-YAGPT_API_ID = 
 YAGPT_API_KEY = 
 MDB_OS_PWD = 
 MDB_OS_HOSTS = fqdn-host1,fqdn-host2,fqdn-host3
